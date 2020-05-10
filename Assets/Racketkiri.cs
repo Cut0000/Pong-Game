@@ -15,9 +15,9 @@ public class Racketkiri : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-         if(Input.GetKey(KeyCode.W)){
+         if(Input.GetKey(KeyCode.UpArrow)){
            GetComponent<Rigidbody2D>().velocity = new Vector2(0,1)* speed ;
-        }else if (Input.GetKey(KeyCode.S)){
+        }else if (Input.GetKey(KeyCode.DownArrow)){
            GetComponent<Rigidbody2D>().velocity = new Vector2(0,-1)* speed ;
         }else{
            GetComponent<Rigidbody2D>().velocity = new Vector2(0,0) * speed ;

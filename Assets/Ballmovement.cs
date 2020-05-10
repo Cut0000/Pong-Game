@@ -7,22 +7,18 @@ public class Ballmovement : MonoBehaviour
     // Start is called before the first frame update
    
     public int speed = 30;
-
     public Rigidbody2D sesuatu;
-    public GameObject MasterScript;
+    public  GameObject masterScript;
     public Animator animtr;
+    
 
     void Start()
     {
-        //Debug.Log("Hello Word");
-        //GetComponent<Rigidbody2D>().velocity = new Vector2 (1,1) * speed;
         sesuatu.velocity = new Vector2(-1,-1) * speed;
-        animtr.SetBool("IsmMove" , true);
+        animtr.SetBool("IsMove" , true);
     }
-
-    // Update is called once per frame
-    //void FixedUpdate()
-  void FixedUpdate()
+    
+    void FixedUpdate()
    {
         if(sesuatu.velocity.x > 0){ //bola bergerak ke-kanan
             sesuatu.GetComponent<Transform>().localScale = new Vector3(1, 1, 1);
@@ -33,11 +29,11 @@ public class Ballmovement : MonoBehaviour
    }
 
     void OnCollisionEnter2D(Collision2D other) {
-      if(other.collider.name == "Kanan" || other.collider.name == "Kiri"){
-          GetComponent<Transform>().position = new Vector2 (0,0);
-              MasterScript.GetComponent<ScoringScript>().UpdateScore(other.collider.name);
-              StartCoroutine(jeda());
+      if(other.collider.name == "Tembokkanan" || other.collider.name == "Tembokkiri"){
+        masterScript.GetComponent<ScoringScript>().UpdateScore(other.collider.name);
+        StartCoroutine(jeda());
         }
+        
     }
 
     IEnumerator jeda(){
@@ -49,4 +45,5 @@ public class Ballmovement : MonoBehaviour
         animtr.SetBool("IsMove", true);
      }
 }
+
 
