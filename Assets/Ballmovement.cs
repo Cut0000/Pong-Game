@@ -9,7 +9,7 @@ public class Ballmovement : MonoBehaviour
     public int speed = 30;
 
     public Rigidbody2D sesuatu;
-
+    public GameObject MasterScript;
     public Animator animtr;
 
     void Start()
@@ -33,8 +33,9 @@ public class Ballmovement : MonoBehaviour
    }
 
     void OnCollisionEnter2D(Collision2D other) {
-      if(other.collider.name == "Tembokkanan" || other.collider.name == "TembokKiri"){
+      if(other.collider.name == "Kanan" || other.collider.name == "Kiri"){
           GetComponent<Transform>().position = new Vector2 (0,0);
+              MasterScript.GetComponent<ScoringScript>().UpdateScore(other.collider.name);
               StartCoroutine(jeda());
         }
     }
