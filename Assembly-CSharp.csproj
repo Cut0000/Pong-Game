@@ -46,6 +46,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Ballmovement.cs" />
+     <Compile Include="Assets\Bigmusic.cs" />
      <Compile Include="Assets\EndingScript.cs" />
      <Compile Include="Assets\PlayScript.cs" />
      <Compile Include="Assets\Racketkiri.cs" />

@@ -10,7 +10,7 @@ public class Ballmovement : MonoBehaviour
     public Rigidbody2D sesuatu;
     public  GameObject masterScript;
     public Animator animtr;
-    
+    public AudioSource hitEffect;
 
     void Start()
     {
@@ -33,7 +33,9 @@ public class Ballmovement : MonoBehaviour
         masterScript.GetComponent<ScoringScript>().UpdateScore(other.collider.name);
         StartCoroutine(jeda());
         }
-        
+        if(other.collider.tag=="Player"){
+            hitEffect.Play();
+        }
     }
 
     IEnumerator jeda(){

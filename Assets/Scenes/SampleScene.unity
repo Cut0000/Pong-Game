@@ -810,7 +810,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -433.1604, y: 126.51677}
+  m_AnchoredPosition: {x: -433.1604, y: 126.516785}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: -1.8708029, y: 2.7603357}
 --- !u!114 &1376121431
@@ -1708,6 +1708,11 @@ PrefabInstance:
       propertyPath: masterScript
       value: 
       objectReference: {fileID: 1524236053}
+    - target: {fileID: 8968252295600492742, guid: 2a7f880e7c248ae45932a2c66472c0df,
+        type: 3}
+      propertyPath: hitEffect
+      value: 
+      objectReference: {fileID: 8968252294202622686}
     - target: {fileID: 8968252295600492744, guid: 2a7f880e7c248ae45932a2c66472c0df,
         type: 3}
       propertyPath: m_Name
